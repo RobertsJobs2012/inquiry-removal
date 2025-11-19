@@ -3,21 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <!-- SEO META TAGS (Per Request) -->
+
     <title>Remove Credit Inquiries Fast | Nationwide Credit Inquiry Removal ($299 Flat)</title>
     <meta name="description" content="Nationwide expert credit inquiry removal. Delete inquiries fast. 100,000+ inquiries removed. 50% OFF today. Call or text 602-377-6626.">
-    
-    <!-- Tailwind CSS -->
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
+
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Tailwind Config for Custom Colors -->
+    
     <script>
         tailwind.config = {
             theme: {
@@ -36,30 +30,37 @@
                     fontFamily: {
                         heading: ['Outfit', 'sans-serif'],
                         body: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        // SLOWED DOWN: Changed from 20s to 45s for readability
+                        'marquee': 'marquee 45s linear infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(100%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        }
                     }
                 }
             }
         }
     </script>
 
-    <!-- Custom Styles & Glassmorphism -->
     <style>
         body {
             background-color: #1E1E1E;
             color: #ffffff;
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Prevents horizontal scroll */
         }
-
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Outfit', sans-serif;
         }
-
         /* Prevent pinch zoom on mobile */
         * {
             touch-action: manipulation;
         }
-
         /* Glassmorphism Utilities */
         .glass {
             background: rgba(255, 255, 255, 0.03);
@@ -68,39 +69,32 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
-
         .glass-nav {
-            background: rgba(30, 30, 30, 0.75);
+            background: rgba(30, 30, 30, 0.85);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-
         .glass-card {
             background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
-
         .glass-card:hover {
-            transform: translateY(-5px);
             border-color: #01ECF3;
         }
-
         /* Gradient Text */
         .text-gradient {
             background: linear-gradient(90deg, #01ECF3 0%, #C200DB 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         .text-gradient-hot {
             background: linear-gradient(90deg, #E80074 0%, #FF114F 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         /* Buttons */
         .btn-primary {
             background: linear-gradient(90deg, #7904EB 0%, #C200DB 100%);
@@ -108,22 +102,18 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-        
         .btn-primary:hover {
             box-shadow: 0 0 20px rgba(194, 0, 219, 0.6);
             transform: scale(1.02);
         }
-
         .btn-accent {
             background: linear-gradient(90deg, #E80074 0%, #FF114F 100%);
             transition: all 0.3s ease;
         }
-
         .btn-accent:hover {
             box-shadow: 0 0 20px rgba(255, 17, 79, 0.6);
             transform: scale(1.02);
         }
-
         /* Glow Effects */
         .glow-blob {
             position: absolute;
@@ -133,8 +123,8 @@
             border-radius: 50%;
             z-index: -1;
             filter: blur(60px);
+            /* Removed transform transition to fix scrolling jitter */
         }
-
         /* Animations */
         @keyframes pulse-ring {
             0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(1, 236, 243, 0.7); }
@@ -144,61 +134,32 @@
         .pulse-btn {
             animation: pulse-ring 2s infinite;
         }
-
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
         }
-
         @keyframes glow-pulse {
             0%, 100% { opacity: 0.3; }
             50% { opacity: 0.6; }
         }
-
-        @keyframes slide-up {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes scale-in {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
         /* Scroll Reveal Animation Classes */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
-
         /* Floating Animation */
         .float-animation {
             animation: float 6s ease-in-out infinite;
         }
-
         /* Glow Animation */
         .glow-animation {
             animation: glow-pulse 4s ease-in-out infinite;
         }
-
         /* FAQ Accordion Transition */
         .accordion-content {
             transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
@@ -209,13 +170,11 @@
         .accordion-content.active {
             opacity: 1;
         }
-
         html {
             scroll-behavior: smooth;
         }
     </style>
 
-    <!-- JSON-LD Schema (Per Request) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -291,27 +250,36 @@
 </head>
 <body class="antialiased relative">
 
-    <!-- Sticky Promo Banner -->
-    <div class="bg-gradient-to-r from-brand-violet via-brand-pink to-brand-cerise text-white text-center py-2 text-sm font-bold fixed top-0 z-[70] w-full">
-        <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-center items-center gap-2">
+    <div class="bg-gradient-to-r from-brand-violet via-brand-pink to-brand-cerise text-white h-12 fixed top-0 z-[70] w-full overflow-hidden flex items-center shadow-lg">
+        <div class="whitespace-nowrap animate-marquee flex items-center gap-8 text-sm font-bold">
             <span class="uppercase tracking-wider">🔥 50% OFF Today Only!</span>
-            <span class="hidden sm:inline">|</span>
+            <span>|</span>
             <span>Now $299 (Was $599). Ends Midnight.</span>
-            <a href="tel:6023776626" class="underline hover:text-brand-cyan ml-2">📞 Call/Text: 602-377-6626</a>
+            <a href="tel:6023776626" class="text-brand-cyan hover:text-white transition-colors">📞 Call/Text: 602-377-6626</a>
+            
+            <span class="mx-8 opacity-50">|</span>
+
+            <span class="uppercase tracking-wider">🔥 50% OFF Today Only!</span>
+            <span>|</span>
+            <span>Now $299 (Was $599). Ends Midnight.</span>
+            <a href="tel:6023776626" class="text-brand-cyan hover:text-white transition-colors">📞 Call/Text: 602-377-6626</a>
+
+            <span class="mx-8 opacity-50">|</span>
+
+            <span class="uppercase tracking-wider">🔥 50% OFF Today Only!</span>
+            <span>|</span>
+            <span>Now $299 (Was $599). Ends Midnight.</span>
+            <a href="tel:6023776626" class="text-brand-cyan hover:text-white transition-colors">📞 Call/Text: 602-377-6626</a>
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="glass-nav fixed w-full top-[36px] z-[60] transition-all duration-300">
+    <nav class="glass-nav fixed w-full top-12 z-[60] transition-all duration-300">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo (UPDATED FOR PNG) -->
+            
             <a href="#" class="flex items-center gap-2">
-                <!-- Replace 'logo.png' with your actual file name if different -->
-                <!-- Ensure your PNG file is in the same folder as this index.html file -->
                 <img src="logo.png" alt="Inquiry Removal Logo" class="h-16 md:h-20 w-auto object-contain transition-all duration-300 hover:scale-105">
             </a>
 
-            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8 font-medium text-gray-300">
                 <a href="#services" class="hover:text-brand-cyan transition-colors">Services</a>
                 <a href="#how-it-works" class="hover:text-brand-cyan transition-colors">How It Works</a>
@@ -320,7 +288,6 @@
                 <a href="#faq" class="hover:text-brand-cyan transition-colors">FAQ</a>
             </div>
 
-            <!-- CTA & Mobile Toggle -->
             <div class="flex items-center gap-4">
                 <a href="tel:6023776626" class="hidden md:flex btn-primary px-6 py-2 rounded-full font-bold text-sm items-center gap-2">
                     <i data-lucide="phone" class="w-4 h-4"></i> 602-377-6626
@@ -331,29 +298,24 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden glass border-t border-gray-700">
-            <div class="flex flex-col p-4 space-y-4 text-center">
-                <a href="#services" class="block py-2 hover:text-brand-cyan">Services</a>
-                <a href="#how-it-works" class="block py-2 hover:text-brand-cyan">How It Works</a>
-                <a href="#results" class="block py-2 hover:text-brand-cyan">Results</a>
-                <a href="#pricing" class="block py-2 hover:text-brand-cyan">Pricing</a>
-                <a href="#faq" class="block py-2 hover:text-brand-cyan">FAQ</a>
-                <a href="tel:6023776626" class="btn-primary w-full py-3 rounded-lg font-bold">Call Now</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1E1E1E] border-t border-gray-700 shadow-2xl absolute w-full">
+            <div class="flex flex-col p-6 space-y-4 text-center">
+                <a href="#services" class="block py-3 text-lg font-medium border-b border-gray-800 hover:text-brand-cyan">Services</a>
+                <a href="#how-it-works" class="block py-3 text-lg font-medium border-b border-gray-800 hover:text-brand-cyan">How It Works</a>
+                <a href="#results" class="block py-3 text-lg font-medium border-b border-gray-800 hover:text-brand-cyan">Results</a>
+                <a href="#pricing" class="block py-3 text-lg font-medium border-b border-gray-800 hover:text-brand-cyan">Pricing</a>
+                <a href="#faq" class="block py-3 text-lg font-medium hover:text-brand-cyan">FAQ</a>
+                <a href="tel:6023776626" class="btn-primary w-full py-4 rounded-lg font-bold text-xl mt-2">Call Now</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-40 pb-20 md:pt-52 md:pb-32 overflow-hidden">
-        <!-- Background Glows -->
+    <section class="relative pt-44 pb-20 md:pt-52 md:pb-32 overflow-hidden">
         <div class="glow-blob top-0 left-0 opacity-30 glow-animation"></div>
         <div class="glow-blob bottom-0 right-0 bg-brand-cyan opacity-20 transform translate-y-1/2 glow-animation" style="animation-delay: 2s;"></div>
-
+        
         <div class="container mx-auto px-4 relative z-10">
-            <!-- Hero Content Grid -->
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Left Column: Text Content -->
                 <div class="text-center md:text-left reveal">
                     <div class="inline-block mb-4 px-4 py-1 rounded-full border border-brand-cyan/30 bg-brand-cyan/10 text-brand-cyan text-sm font-semibold animate-pulse">
                         🔥 Nationwide Expert Inquiry Removal
@@ -366,7 +328,7 @@
                     
                     <p class="text-lg md:text-xl text-gray-300 mb-10">
                         Delete hard inquiries from your credit report quickly. Trusted by thousands with over 
-                        <span class="text-white font-bold">100,000+ inquiries removed</span> across Experian, Equifax, and TransUnion.
+                        <span class="text-white font-bold">100,000+ inquiries removed</span> across Experian, Equifax, and TransUnion. 
                         Boost your score today.
                     </p>
 
@@ -379,7 +341,6 @@
                         </a>
                     </div>
 
-                    <!-- Trust Chips -->
                     <div class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 text-sm text-gray-400 font-medium">
                         <div class="flex items-center gap-2">
                             <i data-lucide="check-circle" class="text-brand-turquoise w-4 h-4"></i> Nationwide Service
@@ -393,21 +354,17 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Headshot -->
                 <div class="reveal flex justify-center md:justify-end" style="animation-delay: 0.2s;">
                     <div class="relative float-animation">
-                        <!-- Glow effect behind image -->
                         <div class="absolute inset-0 bg-gradient-to-br from-brand-cyan via-brand-violet to-brand-pink rounded-full blur-3xl opacity-40"></div>
                         
-                        <!-- Image container with glassmorphism border -->
                         <div class="relative glass-card p-2 rounded-full">
                             <img src="headshot.jpg" 
                                  alt="Professional Credit Expert" 
                                  class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-brand-cyan/30 shadow-2xl"
                                  onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-brand-cyan via-brand-violet to-brand-pink flex items-center justify-center text-6xl font-bold\'>IR</div>';">
                         </div>
-                        
-                        <!-- Floating badge -->
+
                         <div class="absolute -bottom-4 -right-4 glass-card px-6 py-3 rounded-full border-2 border-brand-pink shadow-lg">
                             <div class="text-brand-pink font-bold text-sm">11+ Years</div>
                             <div class="text-xs text-gray-400">Experience</div>
@@ -418,12 +375,10 @@
         </div>
     </section>
 
-    <!-- Trust Bar -->
     <section class="py-8 border-y border-white/5 bg-black/20 reveal">
         <div class="container mx-auto px-4 text-center">
             <p class="text-gray-500 text-sm uppercase tracking-widest mb-6">Trusted Nationwide for Fast Removal</p>
             <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 hover:opacity-100 transition-all duration-500">
-                <!-- Placeholder Logos using Text/Icons for demo self-containment -->
                 <div class="flex items-center gap-2 text-xl font-bold font-heading hover:text-brand-cyan transition-colors"><i data-lucide="shield" class="w-6 h-6"></i> SecureCredit</div>
                 <div class="flex items-center gap-2 text-xl font-bold font-heading hover:text-brand-cyan transition-colors"><i data-lucide="star" class="w-6 h-6"></i> 5-Star Rated</div>
                 <div class="flex items-center gap-2 text-xl font-bold font-heading hover:text-brand-cyan transition-colors"><i data-lucide="users" class="w-6 h-6"></i> 2K+ Clients</div>
@@ -432,14 +387,13 @@
         </div>
     </section>
 
-    <!-- Value Proposition -->
     <section class="py-20 relative">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 reveal">
                 <h2 class="text-3xl md:text-5xl font-bold mb-4">The Fastest Way to <span class="text-brand-cyan">Fix Your Credit</span></h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">We specialize exclusively in credit inquiry removal, which means faster deletion times and higher success rates.</p>
             </div>
-
+            
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass-card p-8 rounded-2xl reveal" style="animation-delay: 0.1s;">
                     <div class="bg-brand-violet/20 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
@@ -448,6 +402,7 @@
                     <h3 class="text-xl font-bold mb-3">Fast Removal</h3>
                     <p class="text-gray-400">Most clients see deletions in 10-21 days. We don't waste time; we go straight to the bureaus.</p>
                 </div>
+
                 <div class="glass-card p-8 rounded-2xl reveal" style="animation-delay: 0.2s;">
                     <div class="bg-brand-pink/20 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
                         <i data-lucide="trending-up" class="text-brand-pink w-6 h-6"></i>
@@ -455,6 +410,7 @@
                     <h3 class="text-xl font-bold mb-3">Boost FICO Score</h3>
                     <p class="text-gray-400">Eliminate unauthorized hard pulls dragging down your score and increase approval odds.</p>
                 </div>
+
                 <div class="glass-card p-8 rounded-2xl reveal" style="animation-delay: 0.3s;">
                     <div class="bg-brand-turquoise/20 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
                         <i data-lucide="map-pin" class="text-brand-turquoise w-6 h-6"></i>
@@ -466,7 +422,6 @@
         </div>
     </section>
 
-    <!-- How It Works -->
     <section id="how-it-works" class="py-20 bg-black/20">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 reveal">
@@ -475,7 +430,6 @@
             </div>
 
             <div class="flex flex-col md:flex-row gap-8 justify-center items-start">
-                <!-- Step 1 -->
                 <div class="flex-1 relative group reveal" style="animation-delay: 0.1s;">
                     <div class="glass p-8 rounded-2xl border-t-4 border-brand-cyan h-full">
                         <span class="absolute -top-4 left-8 bg-brand-bg border border-brand-cyan text-brand-cyan font-bold w-8 h-8 rounded-full flex items-center justify-center z-10">1</span>
@@ -484,7 +438,6 @@
                     </div>
                 </div>
 
-                <!-- Step 2 -->
                 <div class="flex-1 relative group reveal" style="animation-delay: 0.2s;">
                     <div class="glass p-8 rounded-2xl border-t-4 border-brand-purple h-full">
                         <span class="absolute -top-4 left-8 bg-brand-bg border border-brand-purple text-brand-purple font-bold w-8 h-8 rounded-full flex items-center justify-center z-10">2</span>
@@ -493,7 +446,6 @@
                     </div>
                 </div>
 
-                <!-- Step 3 -->
                 <div class="flex-1 relative group reveal" style="animation-delay: 0.3s;">
                     <div class="glass p-8 rounded-2xl border-t-4 border-brand-pink h-full">
                         <span class="absolute -top-4 left-8 bg-brand-bg border border-brand-pink text-brand-pink font-bold w-8 h-8 rounded-full flex items-center justify-center z-10">3</span>
@@ -502,7 +454,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12 reveal" style="animation-delay: 0.4s;">
                 <a href="tel:6023776626" class="btn-accent px-8 py-3 rounded-full font-bold inline-flex items-center gap-2">
                     Start Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -511,7 +463,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="py-20 relative">
         <div class="glow-blob left-0 top-1/2 bg-brand-purple opacity-10 w-[600px] h-[600px]"></div>
         <div class="container mx-auto px-4">
@@ -524,26 +475,27 @@
                         <li class="flex items-start gap-3">
                             <i data-lucide="check" class="text-brand-cyan shrink-0 mt-1"></i>
                             <div>
-                                <strong class="text-white">Hard Inquiry Removal:</strong> 
+                                <strong class="text-white">Hard Inquiry Removal:</strong>
                                 <span class="text-gray-400 text-sm block">Removal from all three bureaus.</span>
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
                             <i data-lucide="check" class="text-brand-cyan shrink-0 mt-1"></i>
                             <div>
-                                <strong class="text-white">Unauthorized Inquiry Erasure:</strong> 
+                                <strong class="text-white">Unauthorized Inquiry Erasure:</strong>
                                 <span class="text-gray-400 text-sm block">Instantly boost credibility by removing pulls you didn't approve.</span>
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
                             <i data-lucide="check" class="text-brand-cyan shrink-0 mt-1"></i>
                             <div>
-                                <strong class="text-white">Specific Categories:</strong> 
+                                <strong class="text-white">Specific Categories:</strong>
                                 <span class="text-gray-400 text-sm block">Car loans, Mortgages, Credit Cards, and Business Credit inquiries.</span>
                             </div>
                         </li>
                     </ul>
                 </div>
+                
                 <div class="md:w-1/2 grid grid-cols-2 gap-4">
                     <div class="glass-card p-6 rounded-xl text-center reveal" style="animation-delay: 0.1s;">
                         <i data-lucide="car" class="w-8 h-8 text-brand-turquoise mx-auto mb-2"></i>
@@ -566,33 +518,28 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
     <section id="results" class="py-20 bg-black/30">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal">Real Results. <span class="text-brand-cyan">Real Success.</span></h2>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Review 1 -->
                 <div class="glass p-6 rounded-xl relative reveal" style="animation-delay: 0.1s;">
-                    <div class="flex text-yellow-400 mb-3">★★★★★</div>
+                    <div class="flex text-yellow-400 mb-3"> ★★★★★ </div>
                     <p class="text-gray-300 text-sm italic mb-4">"My score went up 74 points after they removed 9 hard inquiries."</p>
                     <div class="font-bold text-brand-cyan">— Daniel H.</div>
                 </div>
-                <!-- Review 2 -->
                 <div class="glass p-6 rounded-xl relative reveal" style="animation-delay: 0.2s;">
-                    <div class="flex text-yellow-400 mb-3">★★★★★</div>
+                    <div class="flex text-yellow-400 mb-3"> ★★★★★ </div>
                     <p class="text-gray-300 text-sm italic mb-4">"Fast, professional, and 100% worth it."</p>
                     <div class="font-bold text-brand-cyan">— Melissa A.</div>
                 </div>
-                <!-- Review 3 -->
                 <div class="glass p-6 rounded-xl relative reveal" style="animation-delay: 0.3s;">
-                    <div class="flex text-yellow-400 mb-3">★★★★★</div>
+                    <div class="flex text-yellow-400 mb-3"> ★★★★★ </div>
                     <p class="text-gray-300 text-sm italic mb-4">"They removed 22 inquiries across all bureaus. Life-changing."</p>
                     <div class="font-bold text-brand-cyan">— Robert T.</div>
                 </div>
-                <!-- Review 4 -->
                 <div class="glass p-6 rounded-xl relative reveal" style="animation-delay: 0.4s;">
-                    <div class="flex text-yellow-400 mb-3">★★★★★</div>
+                    <div class="flex text-yellow-400 mb-3"> ★★★★★ </div>
                     <p class="text-gray-300 text-sm italic mb-4">"Hands-down the best credit inquiry removal service in the U.S."</p>
                     <div class="font-bold text-brand-cyan">— Sheila P.</div>
                 </div>
@@ -600,25 +547,21 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
     <section id="pricing" class="py-24 relative overflow-hidden">
-        <!-- Glow behind pricing -->
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-violet/20 filter blur-[100px] rounded-full z-0"></div>
-
+        
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-lg mx-auto glass-card border border-brand-cyan/50 rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(121,4,235,0.3)] reveal">
-                <!-- Header -->
                 <div class="bg-gradient-to-r from-brand-violet to-brand-pink p-6 text-center">
                     <h3 class="text-2xl font-bold text-white uppercase tracking-wider">Special Offer</h3>
                     <div class="inline-block bg-white text-brand-pink text-xs font-bold px-3 py-1 rounded-full mt-2">ENDS MIDNIGHT</div>
                 </div>
-
-                <!-- Body -->
+                
                 <div class="p-8 text-center">
                     <div class="text-gray-400 line-through text-lg mb-1">Normally $599</div>
                     <div class="text-6xl font-bold text-white mb-2">$299<span class="text-xl text-gray-400 font-medium">flat</span></div>
                     <p class="text-brand-cyan font-medium mb-8">50% OFF Today • No Monthly Fees</p>
-
+                    
                     <ul class="text-left space-y-4 mb-8 pl-4">
                         <li class="flex items-center gap-3 text-gray-300"><i data-lucide="check" class="text-brand-cerise w-5 h-5"></i> Removal from Experian</li>
                         <li class="flex items-center gap-3 text-gray-300"><i data-lucide="check" class="text-brand-cerise w-5 h-5"></i> Removal from Equifax</li>
@@ -637,7 +580,6 @@
         </div>
     </section>
 
-    <!-- Guarantees -->
     <section class="py-12 reveal">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -661,7 +603,6 @@
         </div>
     </section>
 
-    <!-- About Us -->
     <section class="py-20 bg-black/20 border-t border-white/5">
         <div class="container mx-auto px-4 max-w-4xl text-center">
             <h2 class="text-3xl font-bold mb-6 reveal">Our Story</h2>
@@ -681,13 +622,11 @@
         </div>
     </section>
 
-    <!-- FAQ -->
     <section id="faq" class="py-20">
         <div class="container mx-auto px-4 max-w-3xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal">Frequently Asked Questions</h2>
             
             <div class="space-y-4">
-                <!-- FAQ Item 1 -->
                 <div class="glass rounded-lg overflow-hidden reveal" style="animation-delay: 0.1s;">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold flex justify-between items-center hover:bg-white/5">
                         Can you legally remove hard inquiries?
@@ -699,8 +638,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ Item 2 -->
                 <div class="glass rounded-lg overflow-hidden reveal" style="animation-delay: 0.2s;">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold flex justify-between items-center hover:bg-white/5">
                         How long do hard inquiries stay on my credit report?
@@ -712,8 +649,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ Item 3 -->
                 <div class="glass rounded-lg overflow-hidden reveal" style="animation-delay: 0.3s;">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold flex justify-between items-center hover:bg-white/5">
                         Does removing inquiries increase my credit score?
@@ -725,8 +660,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ Item 4 -->
                 <div class="glass rounded-lg overflow-hidden reveal" style="animation-delay: 0.4s;">
                     <button class="faq-btn w-full px-6 py-4 text-left font-bold flex justify-between items-center hover:bg-white/5">
                         How do I start?
@@ -742,7 +675,6 @@
         </div>
     </section>
 
-    <!-- Contact / Local Section -->
     <section class="py-12 bg-gradient-to-b from-transparent to-black/40">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-2xl font-bold mb-6 reveal">Nationwide Support</h2>
@@ -763,7 +695,6 @@
         </div>
     </section>
 
-    <!-- Final CTA -->
     <section class="py-20 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-brand-violet to-brand-pink opacity-20"></div>
         <div class="container mx-auto px-4 text-center relative z-10">
@@ -779,7 +710,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-black border-t border-white/10 pt-16 pb-8">
         <div class="container mx-auto px-4 text-center">
             <div class="flex justify-center items-center gap-2 mb-6">
@@ -795,7 +725,6 @@
                 <a href="#pricing" class="hover:text-white">Pricing</a>
                 <a href="#faq" class="hover:text-white">FAQ</a>
             </div>
-
             <div class="max-w-2xl mx-auto text-xs text-gray-600 leading-relaxed mb-8">
                 © Inquiry Removal. All Rights Reserved.<br>
                 We are not a credit repair organization. We focus exclusively on credit inquiry removal under federal laws including FCRA, FCBA, ECOA, and FACTA.
@@ -803,14 +732,13 @@
         </div>
     </footer>
 
-    <!-- Exit Intent Modal -->
     <div id="exit-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal()"></div>
         <div class="glass-card bg-[#1E1E1E] border-brand-pink border-2 p-8 rounded-2xl max-w-md w-full text-center relative z-10 transform scale-100 transition-transform">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
-            
+
             <div class="bg-brand-pink w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
                 <i data-lucide="percent" class="text-white w-8 h-8"></i>
             </div>
@@ -833,9 +761,16 @@
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-
+        
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
         });
 
         // FAQ Accordion Logic
@@ -886,9 +821,9 @@
         // Trigger on timer for mobile (since no mouseleave)
         setTimeout(() => {
             if (!modalShown && window.innerWidth < 768) {
-                // Optional: Uncomment to enable mobile timer popups
-                // modal.classList.remove('hidden');
-                // modalShown = true;
+               // Optional: Uncomment to enable mobile timer popups
+               // modal.classList.remove('hidden');
+               // modalShown = true;
             }
         }, 15000);
 
@@ -914,37 +849,28 @@
         // Check on scroll
         window.addEventListener('scroll', revealOnScroll);
 
-        // Parallax effect for glow blobs
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const glowBlobs = document.querySelectorAll('.glow-blob');
-            
-            glowBlobs.forEach((blob, index) => {
-                const speed = 0.5 + (index * 0.2);
-                blob.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-        });
-
-        // Enhanced hover effects for cards
-        document.querySelectorAll('.glass-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
+        // Enhanced hover effects for cards (Desktop Only)
+        if (window.innerWidth > 768) {
+            document.querySelectorAll('.glass-card').forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateX = (y - centerY) / 20;
+                    const rotateY = (centerX - x) / 20;
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+                });
                 
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / 20;
-                const rotateY = (centerX - x) / 20;
-                
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+                });
             });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-            });
-        });
+        }
 
         // Smooth scroll with offset for fixed header
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
